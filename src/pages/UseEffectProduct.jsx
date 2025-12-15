@@ -31,6 +31,7 @@ function UseEffectProduct(){
             )
           })}
           <div>
+            
           {cartSliceData.items.map((cartItem) => {
             return (
               <div>
