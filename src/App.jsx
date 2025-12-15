@@ -217,11 +217,11 @@ function App() {
       {loading && <p>Loading...</p>}
       {error && <p>Error!</p>}
       {
-        usersData?.users?.length ? (
-          usersData.users.map(user => (
+        // usersData?.users?.length ? (
+          usersData && usersData.users.map(user => (
             <p key={user.id}>{user.firstName}</p>
           ))
-        ) : ""
+        // ) : ""
       }
       <Routes>
         <Route element={<PrivateRoutes />}>
