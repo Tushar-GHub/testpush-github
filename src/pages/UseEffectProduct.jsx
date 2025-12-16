@@ -1,4 +1,3 @@
-import { useEffect , useState } from 'react';
 import useProducts from '../hooks/useProducts';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,8 +16,7 @@ function UseEffectProduct(){
 
           {products.map((item, index) => {
             return (
-              <div className="product-card">
-
+              <div key={item.id} className="product-card">
                 <img src={item.images[0]} alt="Product Image" className="product-img" />
                 <h3 className="product-title">{item.title}</h3>
                 <p className="product-category">Category: {item.category}</p>
@@ -31,7 +29,7 @@ function UseEffectProduct(){
             )
           })}
           <div>
-            
+
           {cartSliceData.items.map((cartItem) => {
             return (
               <div>
